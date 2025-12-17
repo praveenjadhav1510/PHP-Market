@@ -1,0 +1,574 @@
+/* ================= PROFILE PAGE ================= */
+
+.profile-form {
+  max-width: 720px;
+  margin-top: 30px;
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+}
+
+/* HEADINGS */
+.dashboard-content h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.dash-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 25px;
+}
+
+/* FORM GROUP */
+.profile-form .form-group {
+  margin-bottom: 20px;
+}
+
+.profile-form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+/* INPUTS */
+.profile-form input[type="text"],
+.profile-form input[type="email"],
+.profile-form input[type="number"],
+.profile-form input[type="url"],
+.profile-form select,
+.profile-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc; /* fixed as requested */
+  font-size: 14px;
+  background: #fff; /* fixed */
+  color: #111;
+}
+
+.profile-form textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* DISABLED */
+.profile-form input[disabled] {
+  background: #f2f2f2;
+  cursor: not-allowed;
+}
+
+/* FILE INPUT */
+.profile-form input[type="file"] {
+  font-size: 13px;
+}
+
+/* AVATAR / LOGO PREVIEW */
+.profile-form img {
+  display: block;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+}
+
+/* ================= SKILLS ================= */
+
+.skill-input {
+  display: flex;
+  gap: 10px;
+}
+
+.skill-input input {
+  flex: 1;
+}
+
+.skill-input button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#skillList {
+  margin-top: 10px;
+}
+
+/* SKILL TAG */
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #e5e7eb;
+  color: #111;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin: 5px 6px 0 0;
+}
+
+.skill-tag button {
+  background: none;
+  border: none;
+  color: var(--danger);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ================= LINKS ================= */
+
+.profile-form a {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.profile-form a:hover {
+  text-decoration: underline;
+}
+
+/* ================= SUBMIT ================= */
+
+.profile-form .btn-primary {
+  margin-top: 20px;
+  padding: 14px;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 12px;
+}
+/* ================= PROFILE VIEW (CLIENT + DEV) ================= */
+
+.profile-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: var(--card-bg);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+
+/* HEADER */
+.profile-header {
+  text-align: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 30px;
+}
+
+.profile-header .avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 1px solid var(--border);
+}
+
+.profile-header h2 {
+  margin: 8px 0 4px;
+  font-size: 26px;
+}
+
+.profile-header p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* EDIT BUTTON */
+.btn-edit {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-edit:hover {
+  opacity: 0.9;
+}
+
+/* SECTIONS */
+.profile-section {
+  margin-bottom: 24px;
+}
+
+.profile-section h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.profile-section p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* LINKS */
+.profile-section a {
+  color: var(--primary);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.profile-section a:hover {
+  text-decoration: underline;
+}
+
+/* ================= SKILLS (DEVELOPER) ================= */
+
+.skill {
+  display: inline-block;
+  background: #e5e7eb; /* fixed */
+  color: #111;
+  padding: 6px 10px;
+  border-radius: 16px;
+  font-size: 13px;
+  margin: 4px 6px 0 0;
+}
+
+/* GHOST BASE */
+.ghost-profile {
+  background: #5a5a5a;
+  padding: 40px;
+  border-radius: 18px;
+}
+
+/* HEADER */
+.ghost-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.ghost-avatar img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e5e5e5;
+}
+
+.ghost-head-info h2 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.ghost-head-info p {
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+.ghost-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #3f3f3f;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* GRID */
+.ghost-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* CARDS */
+.ghost-card {
+  background: #68686848;
+  color: var(--text);
+  padding: 22px;
+  border-radius: 14px;
+  min-height: 100px;
+}
+
+.ghost-card h4 {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.ghost-card p,
+.ghost-card a {
+  font-size: 16px;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.ghost-wide {
+  grid-column: span 3;
+}
+
+/* SKILLS */
+.ghost-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ghost-skills span {
+  background: #79797978;
+  border: 1px solid var(--primary);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* CERTIFICATE */
+iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  border: none;
+  background: #ccc;
+}
+/* ================= MY APPLICATIONS ================= */
+
+.applications-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.application-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.application-info h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.application-info .company-name {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* STATUS BADGES */
+.application-status {
+  width: 120px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Status Colors */
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-reviewed {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.status-accepted {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ACTIONS */
+.application-actions a {
+  font-size: 13px;
+}
+/* CLIENT PROJECT ACTIONS */
+
+.btn-danger {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #c62742;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-danger:hover {
+  opacity: 0.9;
+}
+
+.project-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+/* ================= PROJECT LIST VIEW ================= */
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+/* ROW CARD */
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 18px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+/* LOGO */
+.company-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #fff;
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+/* MAIN CONTENT */
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 2;
+}
+
+.project-header h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.company-name {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* META INFO */
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text-muted);
+  flex: 1.2;
+}
+
+/* SKILLS */
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1.5;
+}
+
+.skill-tag {
+  background: #e5e7eb;
+  color: #111;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+}
+
+/* ACTIONS */
+.project-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.project-actions a {
+  padding: 8px 14px;
+  font-size: 13px;
+  border-radius: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-meta,
+  .project-skills {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .project-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .ghost-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ghost-wide {
+    grid-column: span 1;
+  }
+
+  .ghost-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 760px) {
+  .profile-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .profile-header h2 {
+    font-size: 22px;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .profile-form {
+    padding: 20px;
+  }
+
+  .skill-input {
+    flex-direction: column;
+  }
+
+  .skill-input button {
+    width: 100%;
+  }
+}

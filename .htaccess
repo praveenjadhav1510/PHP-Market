@@ -1,0 +1,31 @@
+RewriteEngine On
+
+# -------------------------------------------------
+# 1. Set default home page
+# -------------------------------------------------
+DirectoryIndex index.php
+
+# -------------------------------------------------
+# 2. Disable directory listing (SECURITY)
+# -------------------------------------------------
+Options -Indexes
+
+# -------------------------------------------------
+# 3. Prevent access to sensitive files
+# -------------------------------------------------
+<FilesMatch "\.(env|ini|log|sql|bak|sh|htaccess)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# -------------------------------------------------
+# 4. Skip existing files & folders
+# -------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# -------------------------------------------------
+# 5. Clean URLs (remove .php)
+# -------------------------------------------------
+RewriteRule ^(.+)$ $1.php [L,QSA]

@@ -1,0 +1,132 @@
+/* ================= THEME VARIABLES SUPPORT ================= */
+/* Uses global variables from style.css */
+/* Forms & borders intentionally untouched */
+
+/* CONTACT HERO */
+.contact-hero {
+  margin-top: 40px;
+  border-radius: 20px;
+  background: var(--card-bg);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.contact-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.contact-hero p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: auto;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  padding: 80px 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* CONTACT INFO */
+.contact-info h2 {
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card-bg);
+  border: 2px solid #7495c2;
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.contact-card span {
+  font-size: 22px;
+}
+
+.contact-note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #999;
+}
+
+/* CONTACT FORM */
+.contact-form-wrapper {
+  border: 4px solid #7495c2;
+  background: #ffffff;
+  color: #111;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form-wrapper h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 16px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #7495c2;
+  box-shadow: 0 0 0 3px rgba(116, 149, 194, 0.15);
+}
+
+.contact-form .btn-primary {
+  border: 3px solid #7495c2;
+  background: var(--bg);
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-hint {
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-wrapper {
+    margin-top: 20px;
+  }
+}

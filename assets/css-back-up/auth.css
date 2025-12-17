@@ -1,0 +1,292 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background: #1e1e1e;
+  margin: 0;
+}
+.php-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #1e1e1e;
+  padding: 5px;
+  border-radius: 10px;
+}
+.php-logo img {
+  width: 200px;
+  height: auto;
+}
+/* ================= LAYOUT ================= */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: slideFade-right 0.9s ease forwards;
+}
+
+/* ================= CARD ================= */
+.auth-card {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 20px 20px 20px 20px;
+  border: 5px solid #7495c2;
+  animation: fluid-border 3s ease alternate;
+}
+@keyframes fluid-border {
+  0% {
+    border: 5px solid #7495c2;
+    background: #1e1e1e;
+    border-radius: 220px 170px 300px 130px;
+  }
+  75% {
+    border: 5px solid #7495c200;
+    border-radius: 0px 0px 0px 0px;
+  }
+  100% {
+    border: 5px solid #7495c2;
+    border-radius: 20px 20px 20px 20px;
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= HEADINGS ================= */
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 6px;
+  font-size: 30px;
+  color: #1e1e1e;
+  animation: fadeUp 1s ease-in-out alternate;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 26px;
+}
+
+/* ================= FORM ================= */
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #6b7280;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #1e1e1e;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #7495c2;
+  box-shadow: 0 0 0 3px rgba(116, 149, 194, 0.25);
+}
+
+/* ================= BUTTON ================= */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  background: #1e1e1e;
+  border: 3px solid #7495c2;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  animation: fadeUp 1s ease-in-out alternate;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px #00000073;
+}
+
+/* ================= LINKS ================= */
+.switch-link {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.switch-link a {
+  color: #7495c2;
+  text-decoration: none;
+}
+
+.switch-link a:hover {
+  text-decoration: underline;
+}
+
+/* ================= MESSAGES ================= */
+.msg {
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.msg.success {
+  background: rgba(135, 193, 154, 0.18);
+  color: #166534;
+  border: 1px solid rgba(135, 193, 154, 0.35);
+}
+
+.msg.error {
+  background: rgba(198, 39, 66, 0.15);
+  color: #c62742;
+  border: 1px solid rgba(198, 39, 66, 0.35);
+}
+.msg a {
+  color: #9500ff;
+  border-radius: 10px;
+}
+/* ================= REMEMBER ME ================= */
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.remember input {
+  width: 20px;
+  height: 20px;
+  accent-color: #7495c2;
+}
+
+/* ================= WRAPPER ================= */
+.auth-wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ================= LEFT SIDE ================= */
+.auth-left {
+  background: #1e1e1e;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.auth-left-content {
+  max-width: 500px;
+}
+
+.auth-title {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.auth-subtitle {
+  font-size: 16px;
+  color: #7495c2;
+}
+
+/* ================= ANIMATION ================= */
+.animate-text {
+  animation: slideFade-left 0.9s ease forwards;
+}
+
+@keyframes slideFade-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideFade-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ================= RIGHT SIDE ================= */
+.auth-right {
+  background: #1e1e1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* reuse your white auth-card */
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .auth-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-left {
+    display: none;
+  }
+
+  .auth-right {
+    padding: 20px;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 500px) {
+  .auth-card {
+    padding: 26px;
+  }
+  .php-logo {
+    top: 0;
+    left: 0;
+  }
+  .auth-left {
+    display: none;
+  }
+}
