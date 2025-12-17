@@ -321,12 +321,15 @@ section h2 {
 
 /* ================= FEATURED DEVS ================= */
 .dev-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: 25px;
 }
 
 .dev-card {
+  position: relative;
+  width: 300px;
   background: var(--card-bg);
   padding: 25px;
   border-radius: 8px;
@@ -974,4 +977,9 @@ section h2 {
   transform: rotate(90deg) scale(1.1);
   opacity: 0.9;
   box-shadow: 0px 0px 900px 900px var(--theme);
+}
+.cd-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }

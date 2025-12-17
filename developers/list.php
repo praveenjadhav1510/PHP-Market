@@ -88,6 +88,7 @@ for ($i = 1; $i <= 20; $i++) {
                             <h3><?= htmlspecialchars($p['title']) ?></h3>
                             <p>Skills: <?= strtoupper($p['skills']) ?></p>
                             <span><?= $p['budget'] ?> · <?= $p['type'] ?></span>
+                            <button class="btn-outline cd-btn">Apply</button>
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
@@ -104,6 +105,7 @@ for ($i = 1; $i <= 20; $i++) {
                             <h3><?= htmlspecialchars($d['name']) ?></h3>
                             <p><?= strtoupper($d['skills']) ?></p>
                             <span><?= $d['rate'] ?> · ★ <?= $d['rating'] ?></span>
+                            <button class="btn-outline cd-btn">Hire</button>
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>

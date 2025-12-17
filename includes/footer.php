@@ -46,11 +46,11 @@
 
             <!-- Social links (you can remove/add easily) -->
             <div class="social-links">
-                <a href="#" aria-label="Facebook">Facebook</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                <a href="#" aria-label="Instagram">Instagram</a>
-                <a href="#" aria-label="Twitter">Twitter (X)</a>
-                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="https://www.facebook.com" aria-label="Facebook">Facebook</a>
+                <a href="https://www.linkedin.com" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://www.instagram.com/_praveenjadhav_" aria-label="Instagram">Instagram</a>
+                <a href="https://x.com/_praveenjadhav_" aria-label="Twitter">Twitter (X)</a>
+                <a href="https://github.com/praveenjadhav1510" aria-label="GitHub">GitHub</a>
             </div>
         </div>
 
@@ -63,6 +63,5 @@
         </p>
     </div>
 </footer>
-
 </body>
 </html>

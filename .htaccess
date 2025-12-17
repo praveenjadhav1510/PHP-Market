@@ -29,3 +29,6 @@ RewriteRule ^ - [L]
 # 5. Clean URLs (remove .php)
 # -------------------------------------------------
 RewriteRule ^(.+)$ $1.php [L,QSA]
+
+
+ErrorDocument 404 /php-dev-marketplace/404.php
