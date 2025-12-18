@@ -75,10 +75,14 @@ $currentPlan = $_SESSION['plan'] ?? 'free';
                     <li>✖ Priority visibility</li>
                 </ul>
 
-                <?php if ($currentPlan === 'free'): ?>
-                    <button class="btn-outline" disabled>Current Plan</button>
+                <?php if ($isLoggedIn): ?>
+                    <?php if ($currentPlan === 'free'): ?>
+                        <button class="btn-outline" disabled>Current Plan</button>
+                    <?php else: ?>
+                        <a href="/php-dev-marketplace/payment/downgrade.php?plan=free" class="btn-outline">Downgrade</a>
+                    <?php endif; ?>
                 <?php else: ?>
-                    <button class="btn-outline">Downgrade</button>
+                    <a href="/php-dev-marketplace/auth/signup.php" class="btn-outline">Get Started Free</a>
                 <?php endif; ?>
             </div>
 
@@ -91,16 +95,22 @@ $currentPlan = $_SESSION['plan'] ?? 'free';
 
                 <ul class="plan-features">
                     <li>✔ Full profile access</li>
+                    <li>✔ Up to 20 projects (clients)</li>
+                    <li>✔ Up to 50 applications (developers)</li>
                     <li>✔ Unlimited search</li>
                     <li>✔ Direct messaging</li>
                     <li>✔ Higher visibility</li>
                     <li>✔ Faster responses</li>
                 </ul>
 
-                <?php if ($currentPlan === 'pro'): ?>
-                    <button class="btn-primary" disabled>Current Plan</button>
+                <?php if ($isLoggedIn): ?>
+                    <?php if ($currentPlan === 'pro'): ?>
+                        <button class="btn-primary" disabled>Current Plan</button>
+                    <?php else: ?>
+                        <a href="/php-dev-marketplace/payment/payment.php?plan=pro" class="btn-primary">Upgrade to Pro</a>
+                    <?php endif; ?>
                 <?php else: ?>
-                    <a href="#" class="btn-primary">Upgrade to Pro</a>
+                    <a href="/php-dev-marketplace/auth/signup.php" class="btn-primary">Sign Up & Upgrade</a>
                 <?php endif; ?>
             </div>
 
@@ -112,16 +122,22 @@ $currentPlan = $_SESSION['plan'] ?? 'free';
 
                 <ul class="plan-features">
                     <li>✔ Everything in Pro</li>
+                    <li>✔ Unlimited projects</li>
+                    <li>✔ Unlimited applications</li>
                     <li>✔ Featured listings</li>
                     <li>✔ Priority support</li>
                     <li>✔ Advanced analytics</li>
                     <li>✔ Early access features</li>
                 </ul>
 
-                <?php if ($currentPlan === 'premium'): ?>
-                    <button class="btn-primary" disabled>Current Plan</button>
+                <?php if ($isLoggedIn): ?>
+                    <?php if ($currentPlan === 'premium'): ?>
+                        <button class="btn-primary" disabled>Current Plan</button>
+                    <?php else: ?>
+                        <a href="/php-dev-marketplace/payment/payment.php?plan=premium" class="btn-primary">Go Premium</a>
+                    <?php endif; ?>
                 <?php else: ?>
-                    <a href="#" class="btn-primary">Go Premium</a>
+                    <a href="/php-dev-marketplace/auth/signup.php" class="btn-primary">Sign Up & Upgrade</a>
                 <?php endif; ?>
             </div>
 

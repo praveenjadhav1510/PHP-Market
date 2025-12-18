@@ -23,7 +23,7 @@
                 $searchName   = "q";
                 $searchPlaceholder = "Search developers by skill, experience, or budget...";
                 $primaryCtaText = "Post a Project";
-                $primaryCtaLink = "/php-dev-marketplace/dashboard/post-project";
+                $primaryCtaLink = "/php-dev-marketplace/clients/create_project";
             }
 
             /* ================= DEVELOPER ================= */
@@ -34,7 +34,7 @@
                 $searchName   = "q";
                 $searchPlaceholder = "Search projects by PHP, Laravel, or budget...";
                 $primaryCtaText = "Browse Projects";
-                $primaryCtaLink = "/php-dev-marketplace/projects/list";
+                $primaryCtaLink = "/php-dev-marketplace/developers/list";
             }
             ?>
 

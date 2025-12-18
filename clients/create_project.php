@@ -1,9 +1,21 @@
 <?php
 require_once __DIR__ . '/../dashboard/guard.php';
 require_once __DIR__ . '/../config/db.php';
-require_once __DIR__ . '/../includes/header.php';
+require_once __DIR__ . '/../includes/plan-check.php';
 
 $userId = $_SESSION['user_id'];
+$currentPlan = getCurrentPlan();
+
+/* ================= CHECK PLAN LIMITS ================= */
+if (!canPerformAction('create_project', $userId)) {
+    $remaining = getRemainingProjects($userId, $currentPlan);
+    $errorMsg = "You've reached your project limit for the " . ucfirst($currentPlan) . " plan.";
+    if ($remaining !== 'Unlimited') {
+        $errorMsg .= " Upgrade to Pro or Premium for more projects.";
+    }
+    header("Location: /php-dev-marketplace/dashboard/upgrade?error=" . urlencode($errorMsg));
+    exit;
+}
 
 /* ================= FETCH USER EMAIL ================= */
 $stmt = $pdo->prepare("SELECT email FROM users WHERE id = ?");
@@ -15,6 +27,7 @@ if (!$user) {
 }
 
 $userEmail = $user['email'];
+$remainingProjects = getRemainingProjects($userId, $currentPlan);
 
 $success = false;
 $error = "";
@@ -22,17 +35,22 @@ $error = "";
 /* ================= HANDLE FORM SUBMIT ================= */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $title       = trim($_POST['project_title'] ?? '');
-    $description = trim($_POST['project_description'] ?? '');
-    $skills      = isset($_POST['skills']) ? implode(',', $_POST['skills']) : '';
-    $budgetMin   = (int) ($_POST['budget_min'] ?? 0);
-    $budgetMax   = (int) ($_POST['budget_max'] ?? 0);
-    $deadline    = $_POST['deadline'] ?? null;
+    // Check limit again before inserting
+    if (!canPerformAction('create_project', $userId)) {
+        $error = "You've reached your project limit. Please upgrade your plan.";
+    } else {
+        $title       = trim($_POST['project_title'] ?? '');
+        $description = trim($_POST['project_description'] ?? '');
+        $skills      = isset($_POST['skills']) ? implode(',', $_POST['skills']) : '';
+        $budgetMin   = (int) ($_POST['budget_min'] ?? 0);
+        $budgetMax   = (int) ($_POST['budget_max'] ?? 0);
+        $deadline    = $_POST['deadline'] ?? null;
 
-    if (!$title || !$description || !$skills || !$deadline) {
-        $error = "Please fill all required fields";
-    } elseif ($budgetMin >= $budgetMax) {
-        $error = "Budget max must be greater than budget min";
+        if (!$title || !$description || !$skills || !$deadline) {
+            $error = "Please fill all required fields";
+        } elseif ($budgetMin >= $budgetMax) {
+            $error = "Budget max must be greater than budget min";
+        }
     }
 
     /* ================= LOGO UPLOAD ================= */
@@ -77,6 +95,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $success = true;
     }
 }
+
+$pageTitle = "Create Project";
+require_once __DIR__ . '/../includes/header.php';
 ?>
 
 <!DOCTYPE html>
@@ -128,6 +149,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <p class="form-subtitle">
         Fill in the details below. Clear projects get better developers.
     </p>
+
+    <?php if ($remainingProjects !== 'Unlimited'): ?>
+        <div style="background: #e3f2fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; color: #000000; ">
+            <strong>Plan Limit:</strong> You have <?= $remainingProjects ?> project<?= $remainingProjects != 1 ? 's' : '' ?> remaining on your <?= ucfirst($currentPlan) ?> plan.
+            <?php if ($remainingProjects <= 1): ?>
+                <a href="/php-dev-marketplace/dashboard/upgrade" style="color: #1976d2; text-decoration: underline;">Upgrade now</a> for more projects.
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
 
     <?php if ($success): ?>
         <div class="success-msg">✅ Project posted successfully</div>

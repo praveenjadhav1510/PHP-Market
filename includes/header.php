@@ -49,10 +49,14 @@ if ($isLoggedIn && $userType === 'developer') {
     <link rel="apple-touch-icon"
           href="/php-dev-marketplace/assets/images/favicon/apple-touch-icon.png">
 
-    <!-- CSS -->
+    <!-- CSS - Load in order: variables first, then base styles, then components -->
+    <link rel="stylesheet" href="/php-dev-marketplace/assets/css/variables.css">
     <link rel="stylesheet" href="/php-dev-marketplace/assets/css/style.css">
+    <link rel="stylesheet" href="/php-dev-marketplace/assets/css/forms.css">
     <link rel="stylesheet" href="/php-dev-marketplace/assets/css/profile.css">
     <link rel="stylesheet" href="/php-dev-marketplace/assets/css/contact.css">
+    <link rel="stylesheet" href="/php-dev-marketplace/assets/css/dashboard.css">
+    <link rel="stylesheet" href="/php-dev-marketplace/assets/css/create-form.css">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,6 +87,14 @@ if ($isLoggedIn && $userType === 'developer') {
             <a href="/php-dev-marketplace/join">Join</a>
 
             <!-- Mobile Auth -->
+             <span id="themeToggle"
+                    class="theme-toggle"
+                    title="Toggle dark / light mode"
+                    aria-label="Toggle theme">
+                <img id="themeIcon"
+                     src="/php-dev-marketplace/assets/images/theme/moon.png"
+                     alt="Theme toggle">
+            </span>
             <div class="mobile-auth">
                 <?php if ($isLoggedIn): ?>
                     <a href="/php-dev-marketplace/dashboard">Dashboard</a>
@@ -98,14 +110,14 @@ if ($isLoggedIn && $userType === 'developer') {
         <div class="auth-links desktop-auth">
 
             <!-- 🌗 THEME TOGGLE -->
-            <span id="themeToggle"
+            <!-- <span id="themeToggle"
                     class="theme-toggle"
                     title="Toggle dark / light mode"
                     aria-label="Toggle theme">
                 <img id="themeIcon"
                      src="/php-dev-marketplace/assets/images/theme/moon.png"
                      alt="Theme toggle">
-            </span>
+            </span> -->
 
             <?php if ($isLoggedIn): ?>
                 <a href="/php-dev-marketplace/dashboard">Dashboard</a>

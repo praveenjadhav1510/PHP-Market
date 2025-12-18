@@ -20,6 +20,18 @@ if (!$dev) {
     exit;
 }
 
+// Count completed projects
+$completedCountStmt = $pdo->prepare("
+    SELECT COUNT(*) as completed_count
+    FROM project_assignments pa
+    JOIN projects p ON pa.project_id = p.id
+    WHERE pa.developer_id = ? 
+    AND (pa.status = 'completed' OR p.status IN ('completed', 'closed'))
+");
+$completedCountStmt->execute([$userId]);
+$completedResult = $completedCountStmt->fetch();
+$completedProjectsCount = (int)($completedResult['completed_count'] ?? 0);
+
 $skills = json_decode($dev['skills'], true) ?? [];
 ?>
 <!DOCTYPE html>
@@ -75,6 +87,11 @@ $skills = json_decode($dev['skills'], true) ?? [];
         <div class="ghost-card">
             <h4>Location</h4>
             <p><?= htmlspecialchars($dev['location']) ?></p>
+        </div>
+
+        <div class="ghost-card">
+            <h4>Projects Completed</h4>
+            <p><?= $completedProjectsCount ?> project<?= $completedProjectsCount != 1 ? 's' : '' ?></p>
         </div>
 
         <!-- SKILLS -->

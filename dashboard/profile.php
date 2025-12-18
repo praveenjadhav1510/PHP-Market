@@ -137,17 +137,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="form-group">
 <label>Full Name</label>
-<input type="text" value="<?= htmlspecialchars($_SESSION['user_name'] ?? '') ?>" disabled>
+<input type="text" value="<?= htmlspecialchars($_SESSION['user_name'] ?? '') ?>">
 </div>
 
 <div class="form-group">
 <label>Email</label>
-<input type="email" value="<?= htmlspecialchars($_SESSION['user_email'] ?? '') ?>" disabled>
+<input type="email" value="<?= htmlspecialchars($_SESSION['user_email'] ?? '') ?>">
 </div>
 
+<div class="form-group">
 <?php if (!empty($profile['avatar'])): ?>
-<img src="/uploads/avatars/<?= $profile['avatar'] ?>" height="80">
+<img src="/php-dev-marketplace/uploads/avatars/<?= $profile['avatar'] ?>">
 <?php endif; ?>
+</div>
 
 <div class="form-group">
 <label>Avatar</label>
@@ -232,7 +234,7 @@ foreach ($skillsArr as $s) {
 <form method="POST" enctype="multipart/form-data" class="profile-form">
 
 <?php if (!empty($profile['logo_image'])): ?>
-<img src="/uploads/logos/<?= $profile['logo_image'] ?>" height="60">
+<img src="/php-dev-marketplace/uploads/logos/<?= $profile['logo_image'] ?>" height="60">
 <?php endif; ?>
 
 <div class="form-group">

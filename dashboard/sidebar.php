@@ -11,6 +11,7 @@
         <?php else: ?>
             <a href="/php-dev-marketplace/developers/list">Browse Projects</a>
             <a href="/php-dev-marketplace/developers/my_applications">My Applications</a>
+            <a href="/php-dev-marketplace/developers/assigned_projects">Assigned Projects</a>
         <?php endif; ?>
 
         <a href="/php-dev-marketplace/dashboard/upgrade">Plans</a>

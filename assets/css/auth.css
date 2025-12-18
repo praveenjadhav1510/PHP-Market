@@ -121,7 +121,7 @@ body {
 /* ================= BUTTON ================= */
 .btn-primary {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   background: var(--bg);
   border: 3px solid #7495c2;
   color: var(--text);
