@@ -5,7 +5,7 @@ require_once __DIR__ . '/../includes/header.php';
 ?>
 <div class="container"><div class="cover-image container">
     <img src="/php-dev-marketplace/assets/images/contact.jpg" alt="contact-image"/>
-    <h1>Contact Us</h1>
+    <h1>Contact Us <i class="fa-solid fa-phone"></i></h1>
     <p class="updated">Last updated: <?= date('F Y') ?></p>
 </div>
 <section class="contact-hero">
@@ -28,7 +28,7 @@ require_once __DIR__ . '/../includes/header.php';
             </p>
 
             <div class="contact-card">
-                <span>📧</span>
+                <span><i class="fa-solid fa-envelope"></i></span>
                 <div>
                     <strong>Email</strong>
                     <p>support@phpdevmarketplace.com</p>
@@ -36,7 +36,7 @@ require_once __DIR__ . '/../includes/header.php';
             </div>
 
             <div class="contact-card">
-                <span>📞</span>
+                <span><i class="fa-solid fa-phone"></i></span>
                 <div>
                     <strong>Phone</strong>
                     <p>+91 98765 43210</p>
@@ -44,7 +44,7 @@ require_once __DIR__ . '/../includes/header.php';
             </div>
 
             <div class="contact-card">
-                <span>📍</span>
+                <span><i class="fa-solid fa-location-dot"></i></span>
                 <div>
                     <strong>Location</strong>
                     <p>India · Remote First</p>
@@ -85,7 +85,7 @@ require_once __DIR__ . '/../includes/header.php';
                 </div>
 
                 <button type="submit" class="btn-primary">
-                    Send Message
+                    Send Message <i class="fa-solid fa-paper-plane"></i>
                 </button>
 
                 <p class="form-hint">

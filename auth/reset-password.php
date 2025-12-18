@@ -52,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Reset Password</title>
     <link rel="stylesheet" href="/php-dev-marketplace/assets/css/style.css">
     <link rel="stylesheet" href="/php-dev-marketplace/assets/css/auth.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -70,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="password" name="password" required minlength="6">
             </div>
 
-            <button class="btn-primary">Update Password</button>
+            <button class="btn-primary">Update Password <i class="fa-solid fa-pen-to-square"></i></button>
         </form>
     </div>
 </div>

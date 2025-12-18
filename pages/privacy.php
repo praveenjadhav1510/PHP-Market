@@ -7,7 +7,7 @@ require_once __DIR__ . '/../includes/header.php';
   <div class="container">
     <div class="cover-image">
         <img src="/php-dev-marketplace/assets/images/privacy.jpg" alt="privacy-image"/>
-        <h1>Privacy Policy</h1>
+        <h1>Privacy Policy <i class="fa-solid fa-anchor-lock"></i></h1>
         <p class="updated">Last updated: <?= date('F Y') ?></p>
     </div>
 
@@ -56,10 +56,10 @@ require_once __DIR__ . '/../includes/header.php';
     We use collected information to:
     </p>
     <ul>
-    <li>Create and manage user accounts</li>
-    <li>Facilitate connections between clients and developers</li>
-    <li>Improve platform functionality and user experience</li>
-    <li>Maintain security and prevent unauthorized access</li>
+      <li>Create and manage user accounts</li>
+      <li>Facilitate connections between clients and developers</li>
+      <li>Improve platform functionality and user experience</li>
+      <li>Maintain security and prevent unauthorized access</li>
     </ul>
 
     <h2>5. Data Sharing and Disclosure</h2>

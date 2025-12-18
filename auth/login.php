@@ -74,6 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Login | PHP Dev Marketplace</title>
     <link rel="stylesheet" href="/php-dev-marketplace/assets/css/style.css">
     <link rel="stylesheet" href="/php-dev-marketplace/assets/css/auth.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -82,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <!-- LEFT SIDE (OPTIONAL / ANIMATED) -->
     <div class="auth-left">
         <div class="auth-left-content">
-            <h1 class="auth-title animate-text"><?= $authTitle ?></h1>
+            <h1 class="auth-title animate-text"><i class="fa-solid fa-door-open fa-ic"></i><?= $authTitle ?></h1>
             <p class="auth-subtitle animate-text"><?= $authSubtitle ?></p>
         </div>
     </div>
@@ -118,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label for="remember">Remember me (7 days)</label>
                 </div>
 
-                <button class="btn-primary">Login</button>
+                <button class="btn-primary">Login <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
 
                 <p class="switch-link">
                     Don’t have an account?

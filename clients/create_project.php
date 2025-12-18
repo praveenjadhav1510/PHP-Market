@@ -113,7 +113,7 @@ require_once __DIR__ . '/../includes/header.php';
 <!-- ================= PAGE INTRO ================= -->
 <section class="page-intro ">
     <div class="intro-content">
-        <h1>Post a New Project</h1>
+        <h1>Post a New Project <i class="fa-solid fa-diagram-project"></i></h1>
         <p>
             Tell us about your project and connect with skilled PHP developers
             who are ready to build, fix, or scale your product.
@@ -145,7 +145,7 @@ require_once __DIR__ . '/../includes/header.php';
 <!-- ================= FORM CARD ================= -->
 <div class="form-card">
 
-    <h2>Create New Project</h2>
+    <h2>Create New Project <i class="fa-solid fa-diagram-project"></i></h2>
     <p class="form-subtitle">
         Fill in the details below. Clear projects get better developers.
     </p>
@@ -193,11 +193,11 @@ require_once __DIR__ . '/../includes/header.php';
 
         <div class="form-row">
             <div class="form-group">
-                <label>Budget Min (₹)</label>
+                <label>Budget Min <i class="fa-solid fa-indian-rupee-sign"></i></label>
                 <input type="number" name="budget_min" placeholder="5000" required>
             </div>
             <div class="form-group">
-                <label>Budget Max (₹)</label>
+                <label>Budget Max <i class="fa-solid fa-indian-rupee-sign"></i></label>
                 <input type="number" name="budget_max" placeholder="15000" required>
             </div>
         </div>
@@ -213,7 +213,7 @@ require_once __DIR__ . '/../includes/header.php';
             <small>This helps developers recognize your brand</small>
         </div>
 
-        <button type="submit" class="btn-primary">Post Project</button>
+        <button type="submit" class="btn-primary">Post Project <i class="fa-solid fa-paper-plane"></i></button>
     </form>
 
 </div>

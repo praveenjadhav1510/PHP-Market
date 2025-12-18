@@ -243,7 +243,7 @@ if ($isLoggedIn && $userType === 'developer') {
         <!-- ASSIGNMENT SUMMARY -->
         <?php if ($assignment): ?>
             <div class="assignment-box">
-                <h3>Assigned Developer</h3>
+                <h2>Assigned Developer</h2>
                 <p><?= htmlspecialchars($assignment['developer_name']) ?></p>
                 <p>Status: <?= htmlspecialchars(ucfirst($assignment['status'])) ?></p>
             </div>
@@ -273,7 +273,7 @@ if ($isLoggedIn && $userType === 'developer') {
                                 <strong>Plan Limit:</strong> You have <?= $remainingApps ?> application<?= $remainingApps != 1 ? 's' : '' ?> remaining on your <?= ucfirst($currentPlan) ?> plan.
                             </div>
                         <?php endif; ?>
-                        <h3>Apply to this project</h3>
+                        <h2>Apply to this project</h2>
                         <form method="POST">
                             <input type="hidden" name="action" value="apply">
                             <div class="form-group">

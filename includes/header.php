@@ -40,6 +40,28 @@ if ($isLoggedIn && $userType === 'developer') {
     <title><?= $pageTitle ?? 'PHP Dev Marketplace' ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="<?= $pageDescription ?? 'Connect with skilled PHP developers and clients on our marketplace. Post projects, find freelancers, and get your web development needs met.' ?>">
+    <meta name="keywords" content="PHP developers, freelance developers, web development, project marketplace, hire developers, PHP programming, software development">
+    <meta name="author" content="PHP Dev Marketplace">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?= $pageTitle ?? 'PHP Dev Marketplace' ?>">
+    <meta property="og:description" content="<?= $pageDescription ?? 'Connect with skilled PHP developers and clients on our marketplace. Post projects, find freelancers, and get your web development needs met.' ?>">
+    <meta property="og:image" content="/php-dev-marketplace/assets/images/logo.png">
+    <meta property="og:url" content="https://php-dev-marketplace.com<?= $_SERVER['REQUEST_URI'] ?? '' ?>">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?= $pageTitle ?? 'PHP Dev Marketplace' ?>">
+    <meta name="twitter:description" content="<?= $pageDescription ?? 'Connect with skilled PHP developers and clients on our marketplace. Post projects, find freelancers, and get your web development needs met.' ?>">
+    <meta name="twitter:image" content="/php-dev-marketplace/assets/images/logo.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://php-dev-marketplace.com<?= $_SERVER['REQUEST_URI'] ?? '' ?>">
+
     <!-- Favicons -->
     <link rel="icon" href="/php-dev-marketplace/assets/images/favicon/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32"
@@ -58,10 +80,14 @@ if ($isLoggedIn && $userType === 'developer') {
     <link rel="stylesheet" href="/php-dev-marketplace/assets/css/dashboard.css">
     <link rel="stylesheet" href="/php-dev-marketplace/assets/css/create-form.css">
 
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -75,7 +101,7 @@ if ($isLoggedIn && $userType === 'developer') {
         </a>
 
         <!-- Mobile Menu Toggle -->
-        <div class="menu-toggle" id="menuToggle">☰</div>
+        <div class="menu-toggle" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
 
         <!-- Navigation -->
         <nav class="main-nav" id="mainNav">
@@ -121,7 +147,7 @@ if ($isLoggedIn && $userType === 'developer') {
 
             <?php if ($isLoggedIn): ?>
                 <a href="/php-dev-marketplace/dashboard">Dashboard</a>
-                <a href="/php-dev-marketplace/auth/logout" class="btn-outline">Logout</a>
+                <a href="/php-dev-marketplace/auth/logout" class="btn-outline">Logout <i class="fa-solid fa-person-walking-luggage"></i></a>
             <?php else: ?>
                 <a href="/php-dev-marketplace/auth/login">Login</a>
                 <a href="/php-dev-marketplace/auth/signup" class="btn-primary">Signup</a>

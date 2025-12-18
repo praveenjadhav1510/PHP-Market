@@ -69,28 +69,28 @@ if (!$client) {
   <div class="ghost-grid">
 
     <div class="ghost-card">
-      <h4>Contact Person</h4>
+      <h4>Contact Person <i class="fa-solid fa-user"></i></h4>
       <p><?= htmlspecialchars($client['contact_person']) ?></p>
     </div>
 
     <div class="ghost-card">
-      <h4>Budget</h4>
-      <p>₹<?= number_format($client['budget']) ?></p>
+      <h4>Budget <i class="fa-solid fa-indian-rupee-sign"></i></h4>
+      <p><i class="fa-solid fa-indian-rupee-sign"></i><?= number_format($client['budget']) ?></p>
     </div>
 
     <div class="ghost-card">
-      <h4>Location</h4>
+      <h4>Location <i class="fa-solid fa-location-dot"></i></h4>
       <p><?= htmlspecialchars($client['location']) ?></p>
     </div>
 
     <div class="ghost-card ghost-wide">
-      <h4>Description</h4>
+      <h4>Description <i class="fa-solid fa-align-left"></i></h4>
       <p><?= nl2br(htmlspecialchars($client['description'])) ?></p>
     </div>
 
     <?php if (!empty($client['website'])): ?>
     <div class="ghost-card ghost-wide">
-      <h4>Website</h4>
+      <h4>Website <i class="fa-brands fa-pagelines"></i></h4>
       <a href="<?= htmlspecialchars($client['website']) ?>" target="_blank">
         <?= htmlspecialchars($client['website']) ?>
       </a>

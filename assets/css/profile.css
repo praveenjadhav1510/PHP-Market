@@ -189,6 +189,10 @@
   object-fit: cover;
   background: var(--color-bg-secondary);
   border: 3px solid var(--color-border);
+  transition: all 1s ease-in-out;
+}
+.ghost-avatar img:hover {
+  transform: rotateZ(360deg) rotateY(360deg) scale(1.2);
 }
 
 .ghost-head-info h2 {
@@ -380,7 +384,7 @@ iframe {
 .in-process {
   padding: 10px;
   border-radius: 10px;
-  background-color: #858585;
+  background-color: #85858533;
   border: 1px solid var(--primary);
 }
 /* ACTIONS */

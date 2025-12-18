@@ -8,13 +8,13 @@ $currentPlan = $_SESSION['plan'] ?? 'free';
 ?>
 <div class="cover-image container">
     <img src="/php-dev-marketplace/assets/images/pricing.jpg" alt="privacy-image"/>
-    <h1>Join now!</h1>
+    <h1>Join now!!</h1>
     <p class="updated">Last updated: <?= date('F Y') ?></p>
 </div>
 <!-- ================= HERO ================= -->
 <section class="page-hero">
     <div class="container">
-        <h1>Join PHP Dev Marketplace</h1>
+        <h1><i class="fa-solid fa-chart-pie"></i> Join PHP Dev Marketplace</h1>
         <p>
             A modern platform to hire skilled PHP developers or find
             high-quality PHP projects.

@@ -52,12 +52,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Forgot Password</title>
     <link rel="stylesheet" href="/php-dev-marketplace/assets/css/style.css">
     <link rel="stylesheet" href="/php-dev-marketplace/assets/css/auth.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 <div class="php-logo animate-text"><img src="/php-dev-marketplace/assets/images/logo.png" alt="PHP_LOGO"/></div>
 <div class="auth-container">
     <div class="auth-card">
-        <h2>Forgot Password</h2>
+        <h2>Forgot Password <i class="fa-solid fa-person-harassing"></i></h2>
         <p class="subtitle">Enter your registered email</p>
 
         <?php if ($msg): ?>
@@ -70,10 +71,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="email" name="email" required>
             </div>
 
-            <button class="btn-primary">Send Reset Link</button>
+            <button class="btn-primary">Send Reset Link <i class="fa-solid fa-link"></i></button>
 
             <p class="switch-link">
-                <a href="/php-dev-marketplace/auth/login">Back to Login</a>
+                <a href="/php-dev-marketplace/auth/login">Back to Login <i class="fa-solid fa-people-pulling"></i></a>
             </p>
         </form>
     </div>

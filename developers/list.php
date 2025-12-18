@@ -182,7 +182,7 @@ if ($userType === 'developer') {
                                 <?= strtoupper(substr($dev['name'], 0, 1)) ?>
                             </div>
                         <?php endif; ?>
-                        <h3><?= htmlspecialchars($dev['name']) ?></h3>
+                        <h3><i class="fa-solid fa-user-graduate"></i> <?= htmlspecialchars($dev['name']) ?></h3>
                         <p><strong>Primary Skill:</strong> <?= htmlspecialchars($dev['primary_skill'] ?? 'N/A') ?></p>
                         <p><strong>Experience:</strong> <?= (int)$dev['experience'] ?> years</p>
                         <p><strong>Rate:</strong> ₹<?= (int)$dev['rate'] ?>/hr</p>
@@ -204,7 +204,7 @@ if ($userType === 'developer') {
                                 class="btn-primary" 
                                 onclick="openInviteModal(<?= $dev['id'] ?>, '<?= htmlspecialchars(addslashes($dev['name'])) ?>')"
                                 style="margin-top: auto;">
-                                Send Invite
+                                Send Invite <i class="fa-solid fa-link"></i>
                             </button>
                         <?php endif; ?>
                     </div>
@@ -261,7 +261,7 @@ if ($userType === 'developer') {
             
             <div class="form-actions">
                 <button type="submit" class="btn-primary" <?= !$clientProjects ? 'disabled' : '' ?>>
-                    Send Invitation
+                    Send Invitation <i class="fa-solid fa-link"></i>
                 </button>
                 <button type="button" class="btn-outline" onclick="closeInviteModal()">
                     Cancel

@@ -23,7 +23,7 @@ require_once __DIR__ . '/../includes/header.php';
     <div class="container">
         <div class="cover-image">
             <img src="/php-dev-marketplace/assets/images/how-it-works.jpg" alt="privacy-image"/>
-            <h1>How It Works</h1>
+            <h1> How It Works <i class="fa-solid fa-stairs"></i></h1>
             <p class="updated">Last updated: <?= date('F Y') ?></p>
         </div>
         <h1>How PHP Dev Marketplace Works</h1>

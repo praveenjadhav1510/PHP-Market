@@ -117,7 +117,6 @@ body {
   border-color: #7495c2;
   box-shadow: 0 0 0 3px rgba(116, 149, 194, 0.25);
 }
-
 /* ================= BUTTON ================= */
 .btn-primary {
   width: 100%;
@@ -227,6 +226,10 @@ body {
   color: #7495c2;
 }
 
+.fa-ic {
+  color: #7495c2;
+}
+
 /* ================= ANIMATION ================= */
 .animate-text {
   animation: slideFade-left 0.9s ease forwards;
@@ -294,4 +297,10 @@ body {
   .auth-left {
     display: none;
   }
+}
+
+::selection {
+  text-shadow: 0 0 10px #333333;
+  background-color: #9900ff; /* highlight background */
+  color: white; /* selected text color */
 }

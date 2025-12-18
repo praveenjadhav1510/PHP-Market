@@ -39,7 +39,7 @@
             ?>
 
             <!-- HERO CONTENT -->
-            <h1><?= htmlspecialchars($heroTitle) ?></h1>
+            <h1><?= htmlspecialchars($heroTitle) ?> <i class="fa-regular fa-map"></i></h1>
             <p><?= htmlspecialchars($heroSubtitle) ?></p>
 
             <!-- SEARCH -->

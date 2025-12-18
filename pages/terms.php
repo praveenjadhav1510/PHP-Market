@@ -7,7 +7,7 @@ require_once __DIR__ . '/../includes/header.php';
   <div class="container">
     <div class="cover-image">
         <img src="/php-dev-marketplace/assets/images/terms.jpg" alt="privacy-image"/>
-        <h1>Terms & Conditions</h1>
+        <h1>Terms & Conditions <i class="fa-solid fa-book-open"></i></h1>
         <p class="updated">Last updated: <?= date('F Y') ?></p>
     </div>
 

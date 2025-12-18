@@ -6,7 +6,7 @@
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #ddeeff;
   --color-bg-tertiary: #f1f3f5;
-  --color-card-bg: #e1e1e1;
+  --color-card-bg: #e7faff;
   --color-card-border: #e1e5e9;
 
   --color-text-primary: #1a1a1a;
@@ -29,6 +29,7 @@
 
   --color-border: #e2e8f0;
   --color-border-dark: #cbd5e0;
+  --color-navbar: #00caff17;
 
   /* Spacing */
   --spacing-xs: 0.25rem; /* 4px */
@@ -117,6 +118,8 @@
   --color-primary: #7495c2;
   --color-primary-dark: #9bb3d4;
   --color-primary-light: #5a7ba3;
+
+  --color-navbar: #82828221;
 }
 
 /* Legacy variable mapping for backward compatibility */
@@ -148,4 +151,10 @@
   --danger: var(--color-danger);
   --footer: #1e1e1e;
   --theme: var(--color-text-primary);
+}
+
+::selection {
+  text-shadow: 0 0 10px #333333;
+  background-color: #9900ff; /* highlight background */
+  color: white; /* selected text color */
 }

@@ -10,7 +10,7 @@ require_once __DIR__ . '/includes/header.php';
 <!-- ================= HOW IT WORKS ================= -->
 <section class="how-it-works">
     <div class="container">
-        <h2>How It Works</h2>
+        <h2><i class="fa-solid fa-person-digging"></i> How It Works</h2>
 
         <div class="steps">
             <div class="step">
@@ -40,7 +40,7 @@ require_once __DIR__ . '/includes/header.php';
 <!-- ================= FEATURED DEVELOPERS ================= -->
 <section class="featured-devs">
     <div class="container">
-        <h2>Featured PHP Developers</h2>
+        <h2><i class="fa-solid fa-laptop-code"></i> Featured PHP Developers</h2>
 
         <div class="dev-grid">
             <!-- Static for now, dynamic later -->
@@ -68,7 +68,7 @@ require_once __DIR__ . '/includes/header.php';
 <!-- ================= BROWSE BY SKILL ================= -->
 <section class="categories">
     <div class="container">
-        <h2>Browse Developers by Skill</h2>
+        <h2><i class="fa-solid fa-fill-drip"></i> Browse Developers by Skill</h2>
 
         <div class="category-grid">
             <a href="/php-dev-marketplace/developers/list.php?q=php">PHP Core</a>
@@ -83,7 +83,7 @@ require_once __DIR__ . '/includes/header.php';
 <!-- ================= TESTIMONIALS ================= -->
 <section class="testimonials">
     <div class="container">
-        <h2>What Clients Say</h2>
+        <h2><i class="fa-solid fa-ear-listen"></i> What Clients Say</h2>
 
         <div class="testimonial-grid">
             <div class="testimonial">
@@ -118,7 +118,7 @@ require_once __DIR__ . '/includes/header.php';
 
             <!-- DEVELOPER -->
             <div class="join-card developer">
-                <div class="join-icon">{"</>"}</div>
+                <div class="join-icon"><i class="fa-solid fa-laptop-code"></i></div>
 
                 <h3>I'm a Developer</h3>
                 <p>
@@ -133,7 +133,7 @@ require_once __DIR__ . '/includes/header.php';
 
             <!-- BUSINESS -->
             <div class="join-card business">
-                <div class="join-icon">🏢</div>
+                <div class="join-icon"><i class="fa-solid fa-building"></i></div>
 
                 <h3>I'm a Business</h3>
                 <p>
@@ -166,7 +166,7 @@ require_once __DIR__ . '/includes/header.php';
         </p>
 
         <a href="/php-dev-marketplace/auth/signup.php" class="btn-primary">
-            Get Started
+            Get Started <i class="fa-solid fa-boxes-packing"></i>
         </a>
     </div>
 </section>

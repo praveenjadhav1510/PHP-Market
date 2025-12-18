@@ -21,17 +21,17 @@ $userType = $_SESSION['user_type'];
 
         <div class="dash-cards">
             <div class="dash-card">
-                <h3>Profile Status</h3>
+                <h3>Profile Status <i class="fa-solid fa-battery-full"></i></h3>
                 <p>100% completed</p>
             </div>
 
             <div class="dash-card">
-                <h3>Current Plan</h3>
+                <h3>Current Plan <i class="fa-solid fa-layer-group"></i></h3>
                 <p><?= ucfirst($_SESSION['plan'] ?? 'free') ?></p>
             </div>
 
             <div class="dash-card">
-                <h3>Account Type</h3>
+                <h3>Account Type <i class="fa-solid fa-quote-right"></i></h3>
                 <p><?= ucfirst($_SESSION['user_type']) ?></p>
             </div>
         </div>
