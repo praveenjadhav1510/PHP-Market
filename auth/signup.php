@@ -55,6 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup | PHP Dev Marketplace</title>
     <link rel="stylesheet" href="/php-dev-marketplace/assets/css/style.css">
     <link rel="stylesheet" href="/php-dev-marketplace/assets/css/auth.css">
