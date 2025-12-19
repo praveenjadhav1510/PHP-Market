@@ -114,13 +114,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $_SESSION['profile_completed'] = true;
-    if ($userType === 'developer') {
-        header("Location: /php-dev-marketplace/developers/profile.php");
-        exit;
-    } else {
-        header("Location: /php-dev-marketplace/clints/profile.php");
-        exit;        
-    }
+    // if ($userType === 'developer') {
+    //     header("Location: /php-dev-marketplace/developers/profile.php");
+    //     exit;
+    // } else {
+    //     header("Location: /php-dev-marketplace/clients/profile.php");
+    //     exit;        
+    // }
 }
 ?>
 

@@ -165,7 +165,7 @@ require_once __DIR__ . '/includes/header.php';
             Join now and connect with skilled PHP developers today.
         </p>
 
-        <a href="/php-dev-marketplace/auth/signup.php" class="btn-primary">
+        <a href="/php-dev-marketplace/join" class="btn-primary">
             Get Started <i class="fa-solid fa-boxes-packing"></i>
         </a>
     </div>

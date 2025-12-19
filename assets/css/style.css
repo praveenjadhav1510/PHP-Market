@@ -177,13 +177,17 @@ a:hover {
 .mobile-auth {
   display: none;
 }
-
+.for-mob {
+  display: none;
+}
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1020px) {
   .menu-toggle {
     display: block;
   }
-
+  .for-mob {
+    display: block;
+  }
   .main-nav {
     position: absolute;
     top: 70px;
@@ -1391,28 +1395,31 @@ section h2 {
 
 .project-detail .container {
   display: grid;
-  gap: 40px;
   border-radius: 20px;
   padding: 20px;
   background: var(--card-bg);
 }
 .project-detail h1 {
   padding: 0px 20px;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
   text-transform: uppercase;
   background: var(--primary);
 }
 .project-detail h2 {
 }
 .project-detail p {
+  background: var(--bg);
   padding: 10px 20px;
-  border-left: 1px solid var(--primary);
-  border-right: 1px solid var(--primary);
+  border-left: 2px solid var(--primary);
+  border-right: 2px solid var(--primary);
 }
 .project-description {
   min-height: 100px;
   padding: 10px 20px;
   background: var(--primary);
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 0px 0px 10px 10px;
   margin-bottom: 20px;
+}
+.updated {
+  color: var(--bg);
 }
