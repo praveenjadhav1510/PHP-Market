@@ -2,9 +2,14 @@
 // config/db.php
 
 $host = "localhost";
-$dbname = "php_dev_marketplace";   // ✅ your database name
+$dbname = "php_dev_marketplace";
 $username = "root";
 $password = "";
+
+// $host = "sql113.infinityfree.com";
+// $dbname = "if0_40717533_php_dev_marketplace";
+// $username = "if0_40717533";
+// $password = "EuHpCKYPr1U";
 
 try {
     $pdo = new PDO(

@@ -138,6 +138,31 @@ select:focus {
   font-size: var(--font-size-base);
   border-left: 4px solid var(--color-danger);
 }
+.res-grid {
+  border-radius: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+.res-grid ul li {
+  transform: translateX(30px);
+}
+.next-steps {
+  height: 240px;
+  box-sizing: border-box;
+  padding: 30px;
+  background: var(--color-primary);
+  color: var(--text);
+}
+.tips-section {
+  height: 240px;
+  box-sizing: border-box;
+  padding: 30px;
+  background: var(--color-card-bg);
+}
 
 /* Responsive */
 @media (max-width: 768px) {

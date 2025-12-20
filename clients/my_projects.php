@@ -141,7 +141,7 @@ $editId = isset($_GET['edit']) ? (int) $_GET['edit'] : 0;
                     <?php if ($editId === (int)$project['id']): ?>
                         <hr>
                         <h4>Edit Project</h4>
-                        <form method="POST">
+                        <form method="POST" class="edit-project">
                             <input type="hidden" name="project_id" value="<?= $project['id'] ?>">
 
                             <div class="form-group">
@@ -175,6 +175,7 @@ $editId = isset($_GET['edit']) ? (int) $_GET['edit'] : 0;
                             </div>
 
                             <button type="submit" class="btn-primary">Save Changes</button>
+                            <button class="btn-primary x-mark"><a class="x-mark" href="/php-dev-marketplace/clients/my_projects.php">Close <i class="fa-solid fa-xmark"></i></a></button>
                         </form>
                     <?php endif; ?>
 

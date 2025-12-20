@@ -119,12 +119,14 @@ if ($userType === 'developer') {
                     }
                     ?>
                     <div class="dev-card">
-                        <?php if (!empty($p['logo_image'])): ?>
-                            <img src="/php-dev-marketplace/uploads/logos/<?= htmlspecialchars($p['logo_image']) ?>"
-                                 alt="Project Logo"
-                                 class="">
-                        <?php endif; ?>
-                        <h3><?= htmlspecialchars($p['project_title']) ?></h3>
+                        <div class="dev-info">
+                            <?php if (!empty($p['logo_image'])): ?>
+                                <img src="/php-dev-marketplace/uploads/logos/<?= htmlspecialchars($p['logo_image']) ?>"
+                                    alt="Project Logo"
+                                    class="">
+                            <?php endif; ?>
+                            <h3><?= htmlspecialchars($p['project_title']) ?></h3>
+                        </div>
                         <?php 
                         $projectStatus = $p['status'] ?? 'open';
                         if ($projectStatus !== 'open' && $projectStatus !== null): 
@@ -174,23 +176,25 @@ if ($userType === 'developer') {
                     }
                     ?>
                     <div class="dev-card">
-                        <?php if (!empty($dev['avatar'])): ?>
-                            <img src="/php-dev-marketplace/uploads/avatars/<?= htmlspecialchars($dev['avatar']) ?>"
-                                 alt="Developer Avatar">
-                        <?php else: ?>
-                            <div class="dev-avatar-placeholder">
-                                <?= strtoupper(substr($dev['name'], 0, 1)) ?>
-                            </div>
-                        <?php endif; ?>
-                        <h3><i class="fa-solid fa-user-graduate"></i> <?= htmlspecialchars($dev['name']) ?></h3>
-                        <p><strong>Primary Skill:</strong> <?= htmlspecialchars($dev['primary_skill'] ?? 'N/A') ?></p>
-                        <p><strong>Experience:</strong> <?= (int)$dev['experience'] ?> years</p>
-                        <p><strong>Rate:</strong> ₹<?= (int)$dev['rate'] ?>/hr</p>
+                        <div class="dev-info">
+                            <?php if (!empty($dev['avatar'])): ?>
+                                <img src="/php-dev-marketplace/uploads/avatars/<?= htmlspecialchars($dev['avatar']) ?>"
+                                    alt="Developer Avatar">
+                            <?php else: ?>
+                                <div class="dev-avatar-placeholder">
+                                    <?= strtoupper(substr($dev['name'], 0, 1)) ?>
+                                </div>
+                            <?php endif; ?>
+                            <h3><i class="fa-solid fa-user-graduate"></i> <?= htmlspecialchars($dev['name']) ?></h3>
+                        </div>
+                        <p><strong>Primary Skill:</strong><span> <?= htmlspecialchars($dev['primary_skill'] ?? 'N/A') ?></span></p>
+                        <p><strong>Experience:</strong><span> <?= (int)$dev['experience'] ?> years</span></p>
+                        <p><strong>Rate:</strong><span> ₹<?= (int)$dev['rate'] ?>/hr</span></p>
                         <?php if ($dev['location']): ?>
-                            <p><strong>Location:</strong> <?= htmlspecialchars($dev['location']) ?></p>
+                            <p><strong>Location:</strong><span> <?= htmlspecialchars($dev['location']) ?></span></p>
                         <?php endif; ?>
                         <?php if ($skills): ?>
-                            <p><strong>Skills:</strong> <?= htmlspecialchars(implode(', ', $skills)) ?></p>
+                            <p><strong>Skills:</strong><span> <?= htmlspecialchars(implode(', ', $skills)) ?></span></p>
                         <?php endif; ?>
                         
                         <!-- Invite Button -->

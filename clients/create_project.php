@@ -217,26 +217,27 @@ require_once __DIR__ . '/../includes/header.php';
     </form>
 
 </div>
-
+<div class="res-grid create-form-tips">
 <!-- ================= WHAT HAPPENS NEXT ================= -->
-<section class="next-steps">
-    <h3>What happens after you post?</h3>
-    <ul>
-        <li>Your project becomes visible to verified PHP developers</li>
-        <li>Developers can apply with proposals & timelines</li>
-        <li>You review, chat, and hire — all in one place</li>
-    </ul>
-</section>
+    <section class="next-steps">
+        <h3>What happens after you post?</h3>
+        <ul>
+            <li>Your project becomes visible to verified PHP developers</li>
+            <li>Developers can apply with proposals & timelines</li>
+            <li>You review, chat, and hire — all in one place</li>
+        </ul>
+    </section>
 
-<!-- ================= TRUST / TIPS ================= -->
-<section class="tips-section">
-    <h3>Tips for getting better proposals</h3>
-    <ul>
-        <li>Be specific about features and expectations</li>
-        <li>Add a realistic budget range</li>
-        <li>Upload references or a logo if available</li>
-    </ul>
-</section>
+    <!-- ================= TRUST / TIPS ================= -->
+    <section class="tips-section">
+        <h3>Tips for getting better proposals</h3>
+        <ul>
+            <li>Be specific about features and expectations</li>
+            <li>Add a realistic budget range</li>
+            <li>Upload references or a logo if available</li>
+        </ul>
+    </section>
+</div>
 </div>
 <?php require_once __DIR__ . '/../includes/footer.php'; ?>
 

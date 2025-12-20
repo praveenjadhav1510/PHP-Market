@@ -27,7 +27,7 @@ if ($isLoggedIn && $userType === 'client') {
 // Developer
 if ($isLoggedIn && $userType === 'developer') {
     $secondText = "Find Projects";
-    $secondLink = "/php-dev-marketplace/developers/list";
+    $secondLink = "/php-dev-marketplace/projects/list";
 
     $thirdText  = "Dashboard";
     $thirdLink  = "/php-dev-marketplace/dashboard";
@@ -177,7 +177,7 @@ document.getElementById('menuToggle').onclick = function () {
     const moonIcon = "/php-dev-marketplace/assets/images/theme/moon.png";
 
     // Load saved theme
-    const savedTheme = localStorage.getItem("theme") || "dark";
+    const savedTheme = localStorage.getItem("theme") || "lite";
     root.setAttribute("data-theme", savedTheme);
     icon.src = savedTheme === "dark" ? sunIcon : moonIcon;
 

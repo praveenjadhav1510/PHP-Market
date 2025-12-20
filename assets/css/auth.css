@@ -271,10 +271,6 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .auth-left {
-    display: none;
-  }
-
   .auth-right {
     padding: 20px;
   }
@@ -284,13 +280,6 @@ body {
 @media (max-width: 500px) {
   .auth-card {
     padding: 26px;
-  }
-  .php-logo {
-    top: 0;
-    left: 0;
-  }
-  .auth-left {
-    display: none;
   }
 }
 
